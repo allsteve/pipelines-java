@@ -33,6 +33,13 @@ steps:
     filename: 'build.cmd'
     arguments: Build.ArtifactStagingDirectory $(Build.ArtifactStagingDirectory) Build.SourcesDirectory $(Build.SourcesDirectory)
   displayName: 'build'
+  
+- script: |
+    echo %cd%
+    dir
+    test_exe.cmd -r junit -o test_exe.xml
+  workingDirectory: build\bin
+  displayName: 'run test exe'
 
 - script: |
     copy .\build\_CPack_Packages\win64\ZIP\*.zip $(Build.ArtifactStagingDirectory)\_build
@@ -43,14 +50,6 @@ steps:
     testResultsFormat: 'JUnit'
     testResultsFiles: '*.xml'
     searchFolder: $(Build.SourcesDirectory)/build/bin
-
-- script: |
-    echo %cd%
-    dir
-    test_exe.cmd -r junit -o test_exe.xml
-  workingDirectory: build\bin
-  displayName: 'run test exe'
-
 
 - task: PublishBuildArtifacts@1
   inputs:
