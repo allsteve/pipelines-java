@@ -1,4 +1,4 @@
-# No automatic build triggering. bump build
+# No automatic build triggering. bump 
 trigger:
 - master
 
