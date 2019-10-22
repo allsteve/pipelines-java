@@ -45,6 +45,8 @@ steps:
     searchFolder: $(Build.SourcesDirectory)/build/bin
 
 - script: |
+    echo %cd%
+    dir
     test_exe.cmd -r junit -o test_exe.xml
   workingDirectory: build\bin
   displayName: 'run test exe'
