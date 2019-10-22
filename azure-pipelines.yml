@@ -60,7 +60,7 @@ steps:
 - task: UniversalPackages@0
   inputs:
     command: 'publish'
-    publishDirectory: '$(artifact_dir)'
+    publishDirectory: $(artifact_dir)
     feedsToUsePublish: 'internal'
     vstsFeedPublish: 'recruitment-test'
     vstsFeedPackagePublish: 'example_package'
