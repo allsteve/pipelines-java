@@ -12,6 +12,8 @@ if not exist "./\build\bin" mkdir "./\build\bin"
 
 echo.> ./\build\_CPack_Packages\win64\ZIP\thing.zip
 
+copy test_exe.cmd ./\build/bin
+
 dir $(Build.ArtifactStagingDirectory)\_build
 
 dir /s
