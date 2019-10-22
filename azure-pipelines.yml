@@ -1,8 +1,6 @@
 # No automatic build triggering.
 trigger:
-  branches:
-    exclude:
-      - '*'
+- master
 
 pool:
   vmImage: 'vs2017-win2016'
