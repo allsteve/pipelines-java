@@ -62,6 +62,6 @@ steps:
     command: 'publish'
     publishDirectory: '$(artifact_dir)'
     feedsToUsePublish: 'internal'
-    vstsFeedPublish: 'Test_feed'
-    vstsFeedPackagePublish: 'test_package'
+    vstsFeedPublish: 'recruitment-test'
+    vstsFeedPackagePublish: 'example_package'
     versionOption: 'patch'
