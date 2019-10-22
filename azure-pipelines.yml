@@ -42,7 +42,7 @@ steps:
   displayName: 'run test exe'
 
 - script: |
-    copy .\build\_CPack_Packages\win64\ZIP\*.zip $(Build.ArtifactStagingDirectory)\_build
+    copy .\build\_CPack_Packages\win64\ZIP\*.zip $(Build.ArtifactStagingDirectory)\build
   displayName: "Copy build artifact to Artifact Staging Directory."
 
 - task: PublishTestResults@2
