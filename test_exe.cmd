@@ -4,4 +4,4 @@ echo %*
 
 echo %cd%
 
-echo.> test_exe.xml
+copy ..\..\junit_test_example.xml .
